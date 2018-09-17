@@ -43,20 +43,23 @@ longest_name = 0
 
 for name in trainers:
     entries = trainers[name]["entries"]
-    if len(entries) > 1:
-        first = entries[0]
-        last = entries[-1]
-        weeks = (last["date"] - first["date"]).total_seconds() / 24 / 60 / 60 / 7
-        per_week = []
-        for f, l in zip(first["stats"], last["stats"]):
-            per_week.append(int((l - f) / weeks))
-        board.append({
-            "name":   name,
-            "scores":  per_week,
-        })
-        length = unicodeLen(name)
-        if length > longest_name:
-            longest_name = length
+    if len(entries) < 2:
+        continue
+    first = entries[0]
+    last = entries[-1]
+    days = (last["date"] - first["date"]).total_seconds() / 24 / 60 / 60
+    if days < 6.5:
+        continue
+    per_week = []
+    for f, l in zip(first["stats"], last["stats"]):
+        per_week.append(int((l - f) / days * 7))
+    board.append({
+        "name":   name,
+        "scores":  per_week,
+    })
+    length = unicodeLen(name)
+    if length > longest_name:
+        longest_name = length
 
 titles = ["number of Pokemon caught", "km walked", "battles fought", "XP gained"]
 
@@ -72,4 +75,3 @@ for category, title in enumerate(titles):
         if i == 9:
             break
     print "```"
-    
