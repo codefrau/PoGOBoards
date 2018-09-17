@@ -32,8 +32,6 @@ for line in open('data.txt', 'r'):
         "stats": [catch, walk, battle, xp]
     })
 
-
-
 SURROGATE_PAIR = re.compile(u'[\ud800-\udbff][\udc00-\udfff]', re.UNICODE)
 def unicodeLen(s):
     return len(SURROGATE_PAIR.sub('.', s))
@@ -61,17 +59,20 @@ for name in trainers:
     if length > longest_name:
         longest_name = length
 
-titles = ["number of Pokemon caught", "km walked", "battles fought", "XP gained"]
+titles = [":badge_catch: Number of Pokemon caught", ":badge_walk: KM walked", ":badge_battle: Battles fought", ":badge_xp: XP gained"]
 
 for category, title in enumerate(titles):
+    print "**%s per week:**" % title
     print "```"
-    print "Top 10 %s / week" % title
-    board.sort(key=lambda n: n["scores"][category], reverse = True)
+    board.sort(key=lambda trainer: trainer["scores"][category], reverse = True)
+    formatted_numbers = ["{:,}".format(trainer["scores"][category]) for trainer in board]
+    longest_number = max([len(str(n)) for n in formatted_numbers])
     for i, trainer in enumerate(board):
-        name = trainer["name"] 
+        name = trainer["name"]
         name = name + " " * (longest_name - unicodeLen(name))
-        score = "{:,}".format(trainer["scores"][category])
-        print "%2d. %s %10s" % (i + 1, name, score)
+        score = formatted_numbers[i]
+        score = " " * (longest_number - len(score)) + score
+        print "%2d   %s   %s" % (i + 1, score, name)
         if i == 9:
             break
     print "```"
