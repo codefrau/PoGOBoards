@@ -58,7 +58,7 @@ for name in trainers:
         if length > longest_name:
             longest_name = length
 
-titles = ["Pokemon caught", "km walked", "battles faught", "XP gained"]
+titles = ["number of Pokemon caught", "km walked", "battles fought", "XP gained"]
 
 for category, title in enumerate(titles):
     print "```"
