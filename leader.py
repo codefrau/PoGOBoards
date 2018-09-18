@@ -66,26 +66,32 @@ for name in trainers:
 titles = [":badge_catch: Number of Pokemon caught", ":badge_walk: KM walked", ":badge_battle: Battles fought", ":badge_xp: XP gained"]
 places = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":keycap_ten:"]
 
-for TOP10 in [True, False]:
-    for category, title in enumerate(titles):
-        print "**%s per week:**" % title
-        if not TOP10:
-            print "```"
-        board.sort(key=lambda trainer: trainer["scores"][category], reverse = True)
-        formatted_numbers = ["{:,}".format(trainer["scores"][category]) for trainer in board]
-        longest_number = max([len(str(n)) for n in formatted_numbers])
-        for i, trainer in enumerate(board):
-            name = trainer["name"]
-            score = formatted_numbers[i]
-            if TOP10:
-                try:
-                    handle = trainers[name]["handle"]
-                except:
-                    raise Exception("%s not found in names.txt" % name.encode('utf-8'))
-                print "%s **%s** @%s" % (places[i], score, handle)
-            else:
-                score = " " * (longest_number - len(score)) + score
-                print "%2d. %s %s" % (i+1, score, name)
-            if i == 9 and TOP10:
-                break
-        print "" if TOP10 else "```"
+for TOP10 in [True]:
+    for U40 in [True]:
+        for category, title in enumerate(titles):
+            print "**%s per week%s:**" % (title, " (under Lvl 40)" if U40 else "")
+            if not TOP10:
+                print "```"
+            board.sort(key=lambda trainer: trainer["scores"][category], reverse = True)
+            formatted_numbers = ["{:,}".format(trainer["scores"][category]) for trainer in board]
+            longest_number = max([len(str(n)) for n in formatted_numbers])
+            place = 1
+            for i, trainer in enumerate(board):
+                name = trainer["name"]
+                score = formatted_numbers[i]
+                xp = trainers[name]["entries"][-1]["stats"][-1]
+                if U40 and xp >= 20000000:
+                    continue
+                if TOP10:
+                    try:
+                        handle = trainers[name]["handle"]
+                    except:
+                        raise Exception("%s not found in names.txt" % name.encode('utf-8'))
+                    print "%s **%s** @%s" % (places[place-1], score, handle)
+                else:
+                    score = " " * (longest_number - len(score)) + score
+                    print "%2d. %s %s" % (place, score, name)
+                place = place + 1
+                if place > 10 and TOP10:
+                    break
+            print "" if TOP10 else "```"
