@@ -32,6 +32,13 @@ for line in open('data.txt', 'r'):
         "stats": [catch, walk, battle, xp]
     })
 
+    if len(trainer["entries"]) > 1:
+        prev = trainer["entries"][-2]["stats"]
+        this = trainer["entries"][-1]["stats"]
+        for p, t in zip(prev, this):
+            if p > t:
+                trainer["error"] = True
+
 reName = re.compile('^((.*)#[0-9]+) ?(.*)$')
 
 for line in open('names.txt', 'r'):
@@ -48,7 +55,7 @@ board = []
 
 for name in trainers:
     entries = trainers[name]["entries"]
-    if len(entries) < 2:
+    if len(entries) < 2 or "error" in trainers[name]:
         continue
     first = entries[0]
     last = entries[-1]
@@ -95,3 +102,11 @@ for TOP10 in [True]:
                 if place > 10 and TOP10:
                     break
             print "" if TOP10 else "```"
+
+
+for name in trainers:
+    trainer = trainers[name]
+    if "error" in trainer:
+        print "Error in submissions from @%s:" % trainer["handle"]
+        for entry in trainer["entries"]:
+            print entry["date"].isoformat(), entry["stats"]
