@@ -49,7 +49,7 @@ for line in open('names.txt', 'r'):
         trainers[name]["handle"] = handle
     else:
         print line
-        raise Exception("Name not in data: '%s'" % name)
+        raise Exception("Name not in data: '%s'" % name.encode('utf-8'))
 
 board = []
 
@@ -94,10 +94,10 @@ for TOP10 in [True]:
                         handle = trainers[name]["handle"]
                     except:
                         raise Exception("%s not found in names.txt" % name.encode('utf-8'))
-                    print "%s **%s** @%s" % (places[place-1], score, handle)
+                    print "%s **%s** @%s" % (places[place-1], score, handle.encode('utf-8'))
                 else:
                     score = " " * (longest_number - len(score)) + score
-                    print "%2d. %s %s" % (place, score, name)
+                    print "%2d. %s %s" % (place, score, name.encode('utf-8'))
                 place = place + 1
                 if place > 10 and TOP10:
                     break
@@ -107,6 +107,6 @@ for TOP10 in [True]:
 for name in trainers:
     trainer = trainers[name]
     if "error" in trainer:
-        print "Error in submissions from @%s:" % trainer["handle"]
+        print "Error in submissions from @%s:" % trainer["handle"].encode('utf-8')
         for entry in trainer["entries"]:
             print entry["date"].isoformat(), entry["stats"]
