@@ -23,6 +23,7 @@
   549 CrackahBling
   528 Bert (YorokobiYama)
   441 MaJixStaR
+  441 B
   388 Ultrak1ll3r
   387 Souxie
   368 jedizero
@@ -58,6 +59,7 @@
  23 daftl0rd
  23 Bert (YorokobiYama)
  20 kelevin
+ 19 B
  12 Lexually
 ```
 **:badge_battle: Battles fought per week:**
@@ -89,6 +91,7 @@
   6 luceJuiceX(Greg)
   5 baddaddy008
   3 demello23
+  3 B
   2 pelambres323
 ```
 **:badge_xp: XP gained per week:**
@@ -118,6 +121,7 @@
   540,428 jedizero
   520,413 LarviTarPits
   514,402 kelevin
+  465,544 B
   440,938 baddaddy008
   398,658 Lexually
   397,393 demello23
