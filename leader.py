@@ -77,6 +77,8 @@ places = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", "
 TTY = sys.stdout.isatty()
 for TOP10 in [TTY]:
     for U40 in [False, True]:
+        if U40 and not TOP10:
+            break
         for category, title in enumerate(titles):
             print "**%s per week%s:**" % (title, " (under Lvl 40)" if U40 else "")
             if not TOP10:
