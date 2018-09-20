@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import sys
 import re
 import datetime
 
@@ -73,8 +74,9 @@ for name in trainers:
 titles = [":badge_catch: Number of Pokemon caught", ":badge_walk: KM walked", ":badge_battle: Battles fought", ":badge_xp: XP gained"]
 places = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":keycap_ten:"]
 
-for TOP10 in [True]:
-    for U40 in [True]:
+TTY = sys.stdout.isatty()
+for TOP10 in [TTY]:
+    for U40 in [False]:
         for category, title in enumerate(titles):
             print "**%s per week%s:**" % (title, " (under Lvl 40)" if U40 else "")
             if not TOP10:
@@ -97,7 +99,7 @@ for TOP10 in [True]:
                     print "%s **%s** @%s" % (places[place-1], score, handle.encode('utf-8'))
                 else:
                     score = " " * (longest_number - len(score)) + score
-                    print "%2d. %s %s" % (place, score, name.encode('utf-8'))
+                    print "%s %s" % (score, name.encode('utf-8'))
                 place = place + 1
                 if place > 10 and TOP10:
                     break
