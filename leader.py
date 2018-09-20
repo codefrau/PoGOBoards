@@ -76,7 +76,7 @@ places = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", "
 
 TTY = sys.stdout.isatty()
 for TOP10 in [TTY]:
-    for U40 in [False]:
+    for U40 in [False, True]:
         for category, title in enumerate(titles):
             print "**%s per week%s:**" % (title, " (under Lvl 40)" if U40 else "")
             if not TOP10:
@@ -109,6 +109,8 @@ for TOP10 in [TTY]:
 for name in trainers:
     trainer = trainers[name]
     if "error" in trainer:
-        print "Error in submissions from @%s:" % trainer["handle"].encode('utf-8')
+        print "Stat got lower in submission from @%s:" % trainer["handle"].encode('utf-8')
+        print "```"
         for entry in trainer["entries"]:
             print entry["date"].isoformat(), entry["stats"]
+        print "```"
