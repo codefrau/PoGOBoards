@@ -1,0 +1,108 @@
+**:badge_catch: Number of Pokemon caught per week:**
+```
+3,209 guy
+2,322 GreenPajama
+1,762 Shizza
+1,560 MrsLilCupid
+1,247 RunAwayIfUCan
+1,203 WeHoTrick (Chris)
+1,152 confusedtag
+1,062 BocksCarRacer
+  940 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+  936 mrmarkuss
+  902 bcast91
+  758 maddymadhu2088
+  748 pelambres323
+  637 daftl0rd
+  620 Lajahu
+  619 rubenochoa
+  585 kelevin
+  566 Bert (YorokobiYama)
+  555 LarviTarPits
+  549 CrackahBling
+  441 MaJixStaR
+  387 Souxie
+  368 jedizero
+  295 baddaddy008
+```
+**:badge_walk: KM walked per week:**
+```
+223 pelambres323
+ 99 Shizza
+ 94 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+ 85 MrsLilCupid
+ 84 WeHoTrick (Chris)
+ 67 guy
+ 66 GreenPajama
+ 57 confusedtag
+ 55 RunAwayIfUCan
+ 54 MaJixStaR
+ 52 Souxie
+ 47 maddymadhu2088
+ 42 rubenochoa
+ 42 LarviTarPits
+ 42 jedizero
+ 41 mrmarkuss
+ 41 baddaddy008
+ 35 bcast91
+ 30 BocksCarRacer
+ 29 Lajahu
+ 26 CrackahBling
+ 25 Bert (YorokobiYama)
+ 23 daftl0rd
+ 20 kelevin
+```
+**:badge_battle: Battles fought per week:**
+```
+744 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+492 MrsLilCupid
+174 bcast91
+169 guy
+168 WeHoTrick (Chris)
+101 Bert (YorokobiYama)
+ 98 mrmarkuss
+ 87 daftl0rd
+ 82 CrackahBling
+ 66 jedizero
+ 64 Lajahu
+ 56 MaJixStaR
+ 55 RunAwayIfUCan
+ 53 Shizza
+ 47 LarviTarPits
+ 46 rubenochoa
+ 44 Souxie
+ 41 maddymadhu2088
+ 33 GreenPajama
+ 21 confusedtag
+ 21 BocksCarRacer
+ 13 kelevin
+  5 baddaddy008
+  2 pelambres323
+```
+**:badge_xp: XP gained per week:**
+```
+2,992,526 guy
+2,522,602 GreenPajama
+2,290,833 Shizza
+2,223,162 RunAwayIfUCan
+1,519,990 MrsLilCupid
+1,421,515 confusedtag
+1,408,981 bcast91
+1,370,125 maddymadhu2088
+1,359,714 WeHoTrick (Chris)
+1,341,657 Bert (YorokobiYama)
+1,061,490 BocksCarRacer
+1,056,288 Lajahu
+1,024,793 MaJixStaR
+  990,824 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+  793,452 rubenochoa
+  792,847 Souxie
+  699,913 pelambres323
+  682,451 CrackahBling
+  619,166 mrmarkuss
+  558,403 daftl0rd
+  540,428 jedizero
+  520,413 LarviTarPits
+  514,402 kelevin
+  440,938 baddaddy008
+```
