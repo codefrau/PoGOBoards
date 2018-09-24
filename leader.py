@@ -118,7 +118,10 @@ for TOP10 in [TTY]:
 for name in trainers:
     trainer = trainers[name]
     if "error" in trainer:
-        print "Stat got lower in submission from @%s:" % trainer["handle"].encode('utf-8')
+        if "handle" in trainer:
+            print "Stat got lower in submission from @%s:" % trainer["handle"].encode('utf-8')
+        else:
+            print "Stat got lower in submission from %s:" % trainer["name"].encode('utf-8')
         print "```"
         for entry in trainer["entries"]:
             print entry["date"].isoformat(), entry["stats"]
