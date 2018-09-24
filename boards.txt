@@ -1,140 +1,156 @@
 **:badge_catch: Number of Pokemon caught per week:**
 ```
-3,209 guy
+3,176 guy
 2,317 GreenPajama
-1,762 Shizza
-1,439 MrsLilCupid
-1,383 RunAwayIfUCan
-1,255 WeHoTrick (Chris)
+1,953 Shizza
+1,468 RunAwayIfUCan
+1,422 MrsLilCupid
+1,397 WeHoTrick (Chris)
 1,152 confusedtag
 1,105 demello23
-1,040 BocksCarRacer
+1,022 BocksCarRacer
   966 luceJuiceX(Greg)
-  936 mrmarkuss
   902 bcast91
+  900 mrmarkuss
   885 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
-  739 maddymadhu2088
+  795 maddymadhu2088
+  642 CrackahBling
+  640 rubenochoa
   637 daftl0rd
   620 Lajahu
-  619 rubenochoa
   616 Bert (YorokobiYama)
   585 kelevin
   554 LarviTarPits
-  549 CrackahBling
+  541 KNYTEWIING
+  539 B
   530 45665SharkFins
-  483 phoenix
-  441 MaJixStaR
-  441 B
+  469 phoenix
+  459 MaJixStaR
+  449 TheFrenchAzn
+  424 christofu
   388 Ultrak1ll3r
   387 Souxie
   368 jedizero
+  300 Turkman21
   275 baddaddy008
-  261 Turkman21
-  137 Lexually
-```*Updated: Sep 23, 01:31 AM*
+  266 diggity626
+  135 Lexually
+```*Updated: Sep 24, 08:08 AM*
 
 **:badge_walk: KM walked per week:**
 ```
-99 Shizza
-86 WeHoTrick (Chris)
-83 MrsLilCupid
-77 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
-67 guy
-66 GreenPajama
-60 RunAwayIfUCan
-58 demello23
-58 Ultrak1ll3r
-57 confusedtag
-54 MaJixStaR
-52 Souxie
-42 rubenochoa
-42 jedizero
-41 mrmarkuss
-41 LarviTarPits
-40 45665SharkFins
-38 maddymadhu2088
-38 baddaddy008
-36 phoenix
-35 bcast91
-30 BocksCarRacer
-29 Lajahu
-28 luceJuiceX(Greg)
-26 CrackahBling
-24 Bert (YorokobiYama)
-23 daftl0rd
-20 kelevin
-19 B
-19 Turkman21
-12 Lexually
-```*Updated: Sep 23, 01:31 AM*
+107 Shizza
+ 96 WeHoTrick (Chris)
+ 84 MrsLilCupid
+ 77 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+ 67 guy
+ 66 GreenPajama
+ 64 RunAwayIfUCan
+ 58 demello23
+ 58 Ultrak1ll3r
+ 57 confusedtag
+ 53 MaJixStaR
+ 52 Souxie
+ 43 mrmarkuss
+ 43 rubenochoa
+ 42 jedizero
+ 41 LarviTarPits
+ 40 45665SharkFins
+ 38 baddaddy008
+ 37 maddymadhu2088
+ 37 TheFrenchAzn
+ 36 phoenix
+ 35 bcast91
+ 29 CrackahBling
+ 29 Lajahu
+ 29 KNYTEWIING
+ 28 BocksCarRacer
+ 28 luceJuiceX(Greg)
+ 24 Bert (YorokobiYama)
+ 23 daftl0rd
+ 22 B
+ 21 Turkman21
+ 20 kelevin
+ 14 diggity626
+ 13 christofu
+ 10 Lexually
+```*Updated: Sep 24, 08:08 AM*
 
 **:badge_battle: Battles fought per week:**
 ```
 568 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
-534 MrsLilCupid
-319 WeHoTrick (Chris)
+505 MrsLilCupid
+313 WeHoTrick (Chris)
 174 bcast91
-169 guy
-153 phoenix
- 98 mrmarkuss
+160 phoenix
+137 mrmarkuss
+132 guy
+116 KNYTEWIING
  87 daftl0rd
  85 Bert (YorokobiYama)
- 82 CrackahBling
- 76 RunAwayIfUCan
+ 78 RunAwayIfUCan
+ 74 CrackahBling
+ 70 MaJixStaR
  66 jedizero
  64 Lajahu
- 56 MaJixStaR
- 53 Shizza
  51 LarviTarPits
- 48 maddymadhu2088
- 46 rubenochoa
+ 47 Shizza
  44 Souxie
+ 44 maddymadhu2088
  42 Ultrak1ll3r
+ 40 rubenochoa
  29 GreenPajama
- 22 Lexually
  21 confusedtag
- 21 BocksCarRacer
+ 21 Lexually
  17 45665SharkFins
+ 16 BocksCarRacer
  13 kelevin
  10 baddaddy008
   6 luceJuiceX(Greg)
-  5 Turkman21
+  6 Turkman21
+  4 TheFrenchAzn
   3 demello23
-  3 B
-```*Updated: Sep 23, 01:31 AM*
+  3 diggity626
+  3 christofu
+  2 B
+```*Updated: Sep 24, 08:08 AM*
 
 **:badge_xp: XP gained per week:**
 ```
-2,992,526 guy
+3,342,474 guy
+2,676,179 Shizza
+2,414,584 RunAwayIfUCan
 2,349,875 GreenPajama
-2,290,833 Shizza
-2,169,939 RunAwayIfUCan
-1,460,962 MrsLilCupid
+1,545,058 WeHoTrick (Chris)
+1,512,611 MrsLilCupid
 1,421,515 confusedtag
 1,408,981 bcast91
 1,358,269 luceJuiceX(Greg)
-1,260,958 WeHoTrick (Chris)
 1,155,541 Bert (YorokobiYama)
+1,144,171 MaJixStaR
 1,056,288 Lajahu
-1,024,793 MaJixStaR
-  966,962 maddymadhu2088
-  941,042 BocksCarRacer
-  793,452 rubenochoa
+  926,029 BocksCarRacer
+  904,848 maddymadhu2088
   792,847 Souxie
   788,128 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
   752,109 Ultrak1ll3r
-  682,451 CrackahBling
-  645,633 phoenix
-  619,166 mrmarkuss
+  717,168 CrackahBling
+  704,100 mrmarkuss
+  677,520 diggity626
+  668,445 rubenochoa
+  644,207 phoenix
+  562,028 B
   558,403 daftl0rd
   542,102 baddaddy008
   540,428 jedizero
   520,873 LarviTarPits
   514,402 kelevin
-  465,544 B
-  398,658 Lexually
+  411,466 christofu
   397,393 demello23
   389,760 45665SharkFins
-  200,110 Turkman21
-```*Updated: Sep 23, 01:31 AM*
+  389,466 TheFrenchAzn
+  372,331 KNYTEWIING
+  339,756 Lexually
+  246,926 Turkman21
+```*Updated: Sep 24, 08:08 AM*
 
