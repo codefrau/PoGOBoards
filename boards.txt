@@ -3,126 +3,142 @@
 3,209 guy
 2,317 GreenPajama
 1,762 Shizza
-1,560 MrsLilCupid
-1,247 RunAwayIfUCan
-1,203 WeHoTrick (Chris)
+1,439 MrsLilCupid
+1,383 RunAwayIfUCan
+1,255 WeHoTrick (Chris)
 1,152 confusedtag
 1,105 demello23
-1,062 BocksCarRacer
+1,040 BocksCarRacer
   966 luceJuiceX(Greg)
-  940 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
   936 mrmarkuss
   902 bcast91
-  758 maddymadhu2088
+  885 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
   748 pelambres323
+  739 maddymadhu2088
   637 daftl0rd
   620 Lajahu
   619 rubenochoa
+  616 Bert (YorokobiYama)
   585 kelevin
-  555 LarviTarPits
+  554 LarviTarPits
   549 CrackahBling
-  528 Bert (YorokobiYama)
+  530 45665SharkFins
+  483 phoenix
   441 MaJixStaR
   441 B
   388 Ultrak1ll3r
   387 Souxie
   368 jedizero
-  295 baddaddy008
+  275 baddaddy008
+  261 Turkman21
   137 Lexually
-```
+```*Updated: Sep 23, 01:31 AM*
+
 **:badge_walk: KM walked per week:**
 ```
 223 pelambres323
  99 Shizza
- 94 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
- 85 MrsLilCupid
- 84 WeHoTrick (Chris)
+ 86 WeHoTrick (Chris)
+ 83 MrsLilCupid
+ 77 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
  67 guy
  66 GreenPajama
+ 60 RunAwayIfUCan
  58 demello23
  58 Ultrak1ll3r
  57 confusedtag
- 55 RunAwayIfUCan
  54 MaJixStaR
  52 Souxie
- 47 maddymadhu2088
  42 rubenochoa
- 42 LarviTarPits
  42 jedizero
  41 mrmarkuss
- 41 baddaddy008
+ 41 LarviTarPits
+ 40 45665SharkFins
+ 38 maddymadhu2088
+ 38 baddaddy008
+ 36 phoenix
  35 bcast91
  30 BocksCarRacer
  29 Lajahu
  28 luceJuiceX(Greg)
  26 CrackahBling
+ 24 Bert (YorokobiYama)
  23 daftl0rd
- 23 Bert (YorokobiYama)
  20 kelevin
  19 B
+ 19 Turkman21
  12 Lexually
-```
+```*Updated: Sep 23, 01:31 AM*
+
 **:badge_battle: Battles fought per week:**
 ```
-744 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
-492 MrsLilCupid
+568 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+534 MrsLilCupid
+319 WeHoTrick (Chris)
 174 bcast91
 169 guy
-168 WeHoTrick (Chris)
-101 Bert (YorokobiYama)
+153 phoenix
  98 mrmarkuss
  87 daftl0rd
+ 85 Bert (YorokobiYama)
  82 CrackahBling
+ 76 RunAwayIfUCan
  66 jedizero
  64 Lajahu
  56 MaJixStaR
- 55 RunAwayIfUCan
  53 Shizza
- 47 LarviTarPits
+ 51 LarviTarPits
+ 48 maddymadhu2088
  46 rubenochoa
  44 Souxie
  42 Ultrak1ll3r
- 41 maddymadhu2088
  29 GreenPajama
  22 Lexually
  21 confusedtag
  21 BocksCarRacer
+ 17 45665SharkFins
  13 kelevin
+ 10 baddaddy008
   6 luceJuiceX(Greg)
-  5 baddaddy008
+  5 Turkman21
   3 demello23
   3 B
   2 pelambres323
-```
+```*Updated: Sep 23, 01:31 AM*
+
 **:badge_xp: XP gained per week:**
 ```
 2,992,526 guy
 2,349,875 GreenPajama
 2,290,833 Shizza
-2,223,162 RunAwayIfUCan
-1,519,990 MrsLilCupid
+2,169,939 RunAwayIfUCan
+1,460,962 MrsLilCupid
 1,421,515 confusedtag
 1,408,981 bcast91
-1,370,125 maddymadhu2088
-1,359,714 WeHoTrick (Chris)
 1,358,269 luceJuiceX(Greg)
-1,080,387 Bert (YorokobiYama)
-1,061,490 BocksCarRacer
+1,260,958 WeHoTrick (Chris)
+1,155,541 Bert (YorokobiYama)
 1,056,288 Lajahu
 1,024,793 MaJixStaR
-  990,824 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+  966,962 maddymadhu2088
+  941,042 BocksCarRacer
   793,452 rubenochoa
   792,847 Souxie
+  788,128 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
   752,109 Ultrak1ll3r
   699,913 pelambres323
   682,451 CrackahBling
+  645,633 phoenix
   619,166 mrmarkuss
   558,403 daftl0rd
+  542,102 baddaddy008
   540,428 jedizero
-  520,413 LarviTarPits
+  520,873 LarviTarPits
   514,402 kelevin
   465,544 B
-  440,938 baddaddy008
   398,658 Lexually
   397,393 demello23
-```
+  389,760 45665SharkFins
+  200,110 Turkman21
+```*Updated: Sep 23, 01:31 AM*
+
