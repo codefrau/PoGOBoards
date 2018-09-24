@@ -7,6 +7,7 @@ import datetime
 reData = re.compile('^([0-9:T-]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +(.*)$')
 
 trainers = {}
+latest = None
 
 for line in open('data.txt', 'r'):
     match = reData.match(line.decode("utf-8"))
@@ -18,6 +19,7 @@ for line in open('data.txt', 'r'):
     name   = match.group(6)
 
     #print date, catch, walk, battle, xp, name
+    latest = date
     
     if name in trainers:
         trainer = trainers[name]
@@ -105,7 +107,12 @@ for TOP10 in [TTY]:
                 place = place + 1
                 if place > 10 and TOP10:
                     break
-            print "" if TOP10 else "```"
+            if TOP10:
+                print
+            else:
+                print "```*Updated: %s*\n" % latest.strftime("%b %d, %I:%M %p")
+        if TOP10:
+            print "*Updated: %s*\n" % latest.strftime("%b %d, %I:%M %p")
 
 
 for name in trainers:
