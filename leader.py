@@ -119,10 +119,10 @@ for name in trainers:
     trainer = trainers[name]
     if "error" in trainer:
         if "handle" in trainer:
-            print "Stat got lower in submission from @%s:" % trainer["handle"].encode('utf-8')
+            sys.stderr.write("Stat got lower in submission from @%s:\n" % trainer["handle"].encode('utf-8'))
         else:
-            print "Stat got lower in submission from %s:" % trainer["name"].encode('utf-8')
-        print "```"
+            sys.stderr.write("Stat got lower in submission from %sn" % trainer["name"].encode('utf-8'))
+        sys.stderr.write("```\n")
         for entry in trainer["entries"]:
-            print entry["date"].isoformat(), entry["stats"]
-        print "```"
+            sys.stderr.write("%s %s\n" % (entry["date"].isoformat(), entry["stats"]))
+        sys.stderr.write("```\n")
