@@ -13,7 +13,6 @@
   936 mrmarkuss
   902 bcast91
   885 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
-  748 pelambres323
   739 maddymadhu2088
   637 daftl0rd
   620 Lajahu
@@ -36,38 +35,37 @@
 
 **:badge_walk: KM walked per week:**
 ```
-223 pelambres323
- 99 Shizza
- 86 WeHoTrick (Chris)
- 83 MrsLilCupid
- 77 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
- 67 guy
- 66 GreenPajama
- 60 RunAwayIfUCan
- 58 demello23
- 58 Ultrak1ll3r
- 57 confusedtag
- 54 MaJixStaR
- 52 Souxie
- 42 rubenochoa
- 42 jedizero
- 41 mrmarkuss
- 41 LarviTarPits
- 40 45665SharkFins
- 38 maddymadhu2088
- 38 baddaddy008
- 36 phoenix
- 35 bcast91
- 30 BocksCarRacer
- 29 Lajahu
- 28 luceJuiceX(Greg)
- 26 CrackahBling
- 24 Bert (YorokobiYama)
- 23 daftl0rd
- 20 kelevin
- 19 B
- 19 Turkman21
- 12 Lexually
+99 Shizza
+86 WeHoTrick (Chris)
+83 MrsLilCupid
+77 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+67 guy
+66 GreenPajama
+60 RunAwayIfUCan
+58 demello23
+58 Ultrak1ll3r
+57 confusedtag
+54 MaJixStaR
+52 Souxie
+42 rubenochoa
+42 jedizero
+41 mrmarkuss
+41 LarviTarPits
+40 45665SharkFins
+38 maddymadhu2088
+38 baddaddy008
+36 phoenix
+35 bcast91
+30 BocksCarRacer
+29 Lajahu
+28 luceJuiceX(Greg)
+26 CrackahBling
+24 Bert (YorokobiYama)
+23 daftl0rd
+20 kelevin
+19 B
+19 Turkman21
+12 Lexually
 ```*Updated: Sep 23, 01:31 AM*
 
 **:badge_battle: Battles fought per week:**
@@ -103,7 +101,6 @@
   5 Turkman21
   3 demello23
   3 B
-  2 pelambres323
 ```*Updated: Sep 23, 01:31 AM*
 
 **:badge_xp: XP gained per week:**
@@ -126,7 +123,6 @@
   792,847 Souxie
   788,128 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
   752,109 Ultrak1ll3r
-  699,913 pelambres323
   682,451 CrackahBling
   645,633 phoenix
   619,166 mrmarkuss
