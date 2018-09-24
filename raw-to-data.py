@@ -17,7 +17,7 @@ def parseAuthorDate(line, file_date):
     return (author_str, date)
 
 
-reCJBX = re.compile('^![cjbx]{4} +([0-9,]+) +([0-9,]+)[.0-9]* +([0-9,]+) +([0-9,]+)(\(edited\))?$')
+reCJBX = re.compile('^![cjbx]{4} +([0-9,]+) +([0-9,]+)[.0-9,]* +([0-9,]+) +([0-9,]+)(\(edited\))?$')
 
 def parseCJBX(line):
     match = reCJBX.match(line)
