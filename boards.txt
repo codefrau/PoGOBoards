@@ -1,156 +1,176 @@
 **:badge_catch: Number of Pokemon caught per week:**
 ```
-3,176 guy
-2,317 GreenPajama
-1,953 Shizza
-1,468 RunAwayIfUCan
-1,422 MrsLilCupid
-1,397 WeHoTrick (Chris)
-1,152 confusedtag
-1,105 demello23
-1,022 BocksCarRacer
-  966 luceJuiceX(Greg)
-  902 bcast91
-  900 mrmarkuss
-  885 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
-  795 maddymadhu2088
-  642 CrackahBling
-  640 rubenochoa
-  637 daftl0rd
-  620 Lajahu
-  616 Bert (YorokobiYama)
-  585 kelevin
-  554 LarviTarPits
-  541 KNYTEWIING
-  539 B
-  530 45665SharkFins
-  469 phoenix
-  459 MaJixStaR
-  449 TheFrenchAzn
-  424 christofu
-  388 Ultrak1ll3r
-  387 Souxie
-  368 jedizero
-  300 Turkman21
-  275 baddaddy008
-  266 diggity626
-  135 Lexually
-```*Updated: Sep 24, 08:08 AM*
+3,046 guy
+2,217 GreenPajama
+1,901 Shizza
+1,413 RunAwayIfUCan
+1,354 MrsLilCupid
+1,338 WeHoTrick (Chris)
+1,083 demello23
+1,082 confusedtag
+1,006 BocksCarRacer
+  958 luceJuiceX(Greg)
+      --- Top 10 ---
+  899 mrmarkuss
+  875 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+  847 bcast91
+  750 maddymadhu2088
+  615 CrackahBling
+  609 rubenochoa
+  602 Bert (YorokobiYama)
+  594 daftl0rd
+  563 Lajahu
+  553 LarviTarPits
+  546 kelevin
+  519 45665SharkFins
+  517 KNYTEWIING
+  516 B
+  461 phoenix
+  457 MaJixStaR
+  443 funkychipman
+  433 TheFrenchAzn
+  421 beartiticus
+  419 christofu
+  415 boodeez
+  415 FursomeFeline
+  387 Ultrak1ll3r
+  358 Souxie
+  347 jedizero
+  298 Turkman21
+  259 baddaddy008
+  243 diggity626
+  134 Lexually
+```*Updated: Sep 25, 03:33 PM*
 
 **:badge_walk: KM walked per week:**
 ```
-107 Shizza
- 96 WeHoTrick (Chris)
- 84 MrsLilCupid
- 77 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
- 67 guy
- 66 GreenPajama
- 64 RunAwayIfUCan
- 58 demello23
- 58 Ultrak1ll3r
- 57 confusedtag
+105 Shizza
+ 92 WeHoTrick (Chris)
+ 80 MrsLilCupid
+ 76 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+ 64 guy
+ 63 GreenPajama
+ 61 RunAwayIfUCan
+ 57 demello23
+ 57 Ultrak1ll3r
+ 53 confusedtag
+    --- Top 10 ---
  53 MaJixStaR
- 52 Souxie
+ 48 Souxie
  43 mrmarkuss
- 43 rubenochoa
- 42 jedizero
+ 41 rubenochoa
  41 LarviTarPits
- 40 45665SharkFins
- 38 baddaddy008
- 37 maddymadhu2088
- 37 TheFrenchAzn
- 36 phoenix
- 35 bcast91
- 29 CrackahBling
- 29 Lajahu
- 29 KNYTEWIING
+ 39 jedizero
+ 38 45665SharkFins
+ 36 TheFrenchAzn
+ 36 baddaddy008
+ 35 maddymadhu2088
+ 35 phoenix
+ 33 bcast91
+ 33 FursomeFeline
  28 BocksCarRacer
  28 luceJuiceX(Greg)
- 24 Bert (YorokobiYama)
- 23 daftl0rd
- 22 B
+ 28 CrackahBling
+ 28 KNYTEWIING
+ 26 Lajahu
+ 23 Bert (YorokobiYama)
+ 22 funkychipman
+ 22 beartiticus
+ 21 daftl0rd
+ 21 kelevin
+ 21 B
+ 21 boodeez
  21 Turkman21
- 20 kelevin
- 14 diggity626
  13 christofu
+ 13 diggity626
  10 Lexually
-```*Updated: Sep 24, 08:08 AM*
+```*Updated: Sep 25, 03:33 PM*
 
 **:badge_battle: Battles fought per week:**
 ```
-568 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
-505 MrsLilCupid
-313 WeHoTrick (Chris)
-174 bcast91
-160 phoenix
+561 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+480 MrsLilCupid
+300 WeHoTrick (Chris)
+163 bcast91
+158 phoenix
 137 mrmarkuss
-132 guy
-116 KNYTEWIING
- 87 daftl0rd
- 85 Bert (YorokobiYama)
- 78 RunAwayIfUCan
- 74 CrackahBling
+126 guy
+111 KNYTEWIING
+100 FursomeFeline
+ 83 Bert (YorokobiYama)
+    --- Top 10 ---
+ 81 daftl0rd
+ 75 RunAwayIfUCan
+ 74 boodeez
+ 71 CrackahBling
  70 MaJixStaR
- 66 jedizero
- 64 Lajahu
+ 62 jedizero
+ 58 Lajahu
  51 LarviTarPits
- 47 Shizza
- 44 Souxie
- 44 maddymadhu2088
+ 45 Shizza
  42 Ultrak1ll3r
- 40 rubenochoa
- 29 GreenPajama
- 21 confusedtag
+ 42 maddymadhu2088
+ 41 Souxie
+ 38 rubenochoa
+ 28 GreenPajama
+ 22 beartiticus
  21 Lexually
- 17 45665SharkFins
+ 20 confusedtag
+ 19 45665SharkFins
+ 19 funkychipman
  16 BocksCarRacer
- 13 kelevin
- 10 baddaddy008
+ 11 kelevin
+  9 baddaddy008
   6 luceJuiceX(Greg)
   6 Turkman21
   4 TheFrenchAzn
   3 demello23
-  3 diggity626
   3 christofu
+  3 diggity626
   2 B
-```*Updated: Sep 24, 08:08 AM*
+```*Updated: Sep 25, 03:33 PM*
 
 **:badge_xp: XP gained per week:**
 ```
-3,342,474 guy
-2,676,179 Shizza
-2,414,584 RunAwayIfUCan
-2,349,875 GreenPajama
-1,545,058 WeHoTrick (Chris)
-1,512,611 MrsLilCupid
-1,421,515 confusedtag
-1,408,981 bcast91
-1,358,269 luceJuiceX(Greg)
-1,155,541 Bert (YorokobiYama)
-1,144,171 MaJixStaR
-1,056,288 Lajahu
-  926,029 BocksCarRacer
-  904,848 maddymadhu2088
-  792,847 Souxie
-  788,128 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
-  752,109 Ultrak1ll3r
-  717,168 CrackahBling
-  704,100 mrmarkuss
-  677,520 diggity626
-  668,445 rubenochoa
-  644,207 phoenix
-  562,028 B
-  558,403 daftl0rd
-  542,102 baddaddy008
-  540,428 jedizero
-  520,873 LarviTarPits
-  514,402 kelevin
-  411,466 christofu
-  397,393 demello23
-  389,760 45665SharkFins
-  389,466 TheFrenchAzn
-  372,331 KNYTEWIING
-  339,756 Lexually
-  246,926 Turkman21
-```*Updated: Sep 24, 08:08 AM*
+3,205,267 guy
+2,604,835 Shizza
+2,323,665 RunAwayIfUCan
+2,248,817 GreenPajama
+1,480,323 WeHoTrick (Chris)
+1,439,607 MrsLilCupid
+1,347,107 luceJuiceX(Greg)
+1,335,879 confusedtag
+1,322,795 bcast91
+1,138,786 MaJixStaR
+          --- Top 10 ---
+1,128,588 Bert (YorokobiYama)
+  971,530 funkychipman
+  959,462 Lajahu
+  912,060 BocksCarRacer
+  853,987 maddymadhu2088
+  778,785 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+  773,749 beartiticus
+  750,400 Ultrak1ll3r
+  733,873 Souxie
+  703,421 mrmarkuss
+  686,761 CrackahBling
+  635,777 rubenochoa
+  633,411 phoenix
+  617,884 diggity626
+  607,675 kelevin
+  537,960 B
+  520,336 daftl0rd
+  520,174 LarviTarPits
+  510,258 baddaddy008
+  509,247 jedizero
+  418,330 FursomeFeline
+  413,521 boodeez
+  406,364 christofu
+  401,770 45665SharkFins
+  389,436 demello23
+  375,537 TheFrenchAzn
+  355,990 KNYTEWIING
+  338,423 Lexually
+  245,615 Turkman21
+```*Updated: Sep 25, 03:33 PM*
 
