@@ -2,6 +2,7 @@
 
 import sys
 import re
+import math
 import datetime
 
 reData = re.compile('^([0-9:T-]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +(.*)$')
@@ -42,6 +43,9 @@ for line in open('data.txt', 'r'):
             if p > t:
                 trainer["error"] = True
 
+month = latest.strftime("%B")
+latest = latest.strftime("%b %d, %I:%M %p")
+
 reName = re.compile('^((.*)#[0-9]+) ?(.*)$')
 
 for line in open('names.txt', 'r'):
@@ -51,7 +55,7 @@ for line in open('names.txt', 'r'):
     if name in trainers:
         trainers[name]["handle"] = handle
     else:
-        print line
+        sys.stderr.write(line)
         raise Exception("Name not in data: '%s'" % name.encode('utf-8'))
 
 board = []
@@ -62,8 +66,15 @@ for name in trainers:
         continue
     first = entries[0]
     last = entries[-1]
-    days = (last["date"] - first["date"]).total_seconds() / 24 / 60 / 60
-    if days < 6.5:
+    days = 0
+    for i in range(0, len(entries) - 1):
+        d = math.ceil((last["date"] - entries[i]["date"]).total_seconds() / 24 / 60 / 60)
+        if d >= 6 or days == 0:
+            first = entries[i]
+            days = d
+        break  ############# disabled for now, use oldest and latest
+    trainers[name]["days"] = days
+    if days < 6:
         continue
     per_week = []
     for f, l in zip(first["stats"], last["stats"]):
@@ -82,8 +93,13 @@ for TOP10 in [TTY]:
         if U40 and not TOP10:
             break
         for category, title in enumerate(titles):
-            print "**%s per week%s:**" % (title, " (under Lvl 40)" if U40 else "")
-            if not TOP10:
+            if TOP10:
+                if U40:
+                    print "**%s per week (under Lvl 40):**" % title
+                else:
+                    print "**%s per week:**" % title
+            else:
+                print "**%s per week:**" % title
                 print "```"
             board.sort(key=lambda trainer: trainer["scores"][category], reverse = True)
             formatted_numbers = ["{:,}".format(trainer["scores"][category]) for trainer in board]
@@ -105,15 +121,14 @@ for TOP10 in [TTY]:
                     score = " " * (longest_number - len(score)) + score
                     print "%s %s" % (score, name.encode('utf-8'))
                 place = place + 1
-                if place > 10 and TOP10:
-                    break
-            if TOP10:
-                print
-            else:
-                print "```*Updated: %s*\n" % latest.strftime("%b %d, %I:%M %p")
+                if place == 11:
+                    if TOP10:
+                        break
+                    else:
+                        print "%s --- Top 10 ---" % (" " * longest_number)
+            print "" if TOP10 else "```*Updated: %s*\n" % latest
         if TOP10:
-            print "*Updated: %s*\n" % latest.strftime("%b %d, %I:%M %p")
-
+            print "*Updated: %s*\n" % latest
 
 for name in trainers:
     trainer = trainers[name]
