@@ -3,24 +3,26 @@
 3,046 guy
 2,217 GreenPajama
 1,901 Shizza
-1,413 RunAwayIfUCan
+1,410 RunAwayIfUCan
 1,354 MrsLilCupid
 1,338 WeHoTrick (Chris)
+1,152 DriveTemptation
 1,083 demello23
 1,082 confusedtag
-1,006 BocksCarRacer
-  958 luceJuiceX(Greg)
+  994 BocksCarRacer
       --- Top 10 ---
+  958 luceJuiceX(Greg)
   899 mrmarkuss
-  875 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+  883 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
   847 bcast91
   750 maddymadhu2088
   615 CrackahBling
   609 rubenochoa
+  607 LarviTarPits
   602 Bert (YorokobiYama)
   594 daftl0rd
+  566 skyhighfry
   563 Lajahu
-  553 LarviTarPits
   546 kelevin
   519 45665SharkFins
   517 KNYTEWIING
@@ -31,32 +33,34 @@
   433 TheFrenchAzn
   421 beartiticus
   419 christofu
-  415 boodeez
   415 FursomeFeline
+  409 boodeez
   387 Ultrak1ll3r
   358 Souxie
   347 jedizero
   298 Turkman21
   259 baddaddy008
-  243 diggity626
+  220 diggity626
   134 Lexually
-```*Updated: Sep 25, 03:33 PM*
+```*Updated: Sep 28, 03:04 PM*
 
 **:badge_walk: KM walked per week:**
 ```
 105 Shizza
  92 WeHoTrick (Chris)
  80 MrsLilCupid
- 76 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+ 75 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
  64 guy
  63 GreenPajama
- 61 RunAwayIfUCan
+ 62 RunAwayIfUCan
  57 demello23
  57 Ultrak1ll3r
  53 confusedtag
     --- Top 10 ---
  53 MaJixStaR
+ 49 skyhighfry
  48 Souxie
+ 46 DriveTemptation
  43 mrmarkuss
  41 rubenochoa
  41 LarviTarPits
@@ -76,37 +80,38 @@
  23 Bert (YorokobiYama)
  22 funkychipman
  22 beartiticus
+ 22 boodeez
  21 daftl0rd
  21 kelevin
  21 B
- 21 boodeez
  21 Turkman21
  13 christofu
- 13 diggity626
+ 12 diggity626
  10 Lexually
-```*Updated: Sep 25, 03:33 PM*
+```*Updated: Sep 28, 03:04 PM*
 
 **:badge_battle: Battles fought per week:**
 ```
-561 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
 480 MrsLilCupid
+468 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
 300 WeHoTrick (Chris)
 163 bcast91
 158 phoenix
 137 mrmarkuss
+127 skyhighfry
 126 guy
 111 KNYTEWIING
 100 FursomeFeline
- 83 Bert (YorokobiYama)
     --- Top 10 ---
+ 83 Bert (YorokobiYama)
  81 daftl0rd
- 75 RunAwayIfUCan
- 74 boodeez
+ 80 boodeez
+ 74 RunAwayIfUCan
  71 CrackahBling
  70 MaJixStaR
  62 jedizero
  58 Lajahu
- 51 LarviTarPits
+ 53 LarviTarPits
  45 Shizza
  42 Ultrak1ll3r
  42 maddymadhu2088
@@ -118,37 +123,39 @@
  20 confusedtag
  19 45665SharkFins
  19 funkychipman
- 16 BocksCarRacer
+ 14 DriveTemptation
+ 13 BocksCarRacer
  11 kelevin
   9 baddaddy008
   6 luceJuiceX(Greg)
   6 Turkman21
+  6 diggity626
   4 TheFrenchAzn
   3 demello23
   3 christofu
-  3 diggity626
   2 B
-```*Updated: Sep 25, 03:33 PM*
+```*Updated: Sep 28, 03:04 PM*
 
 **:badge_xp: XP gained per week:**
 ```
 3,205,267 guy
 2,604,835 Shizza
-2,323,665 RunAwayIfUCan
+2,393,034 RunAwayIfUCan
 2,248,817 GreenPajama
+1,791,970 DriveTemptation
 1,480,323 WeHoTrick (Chris)
 1,439,607 MrsLilCupid
 1,347,107 luceJuiceX(Greg)
 1,335,879 confusedtag
 1,322,795 bcast91
-1,138,786 MaJixStaR
           --- Top 10 ---
+1,138,786 MaJixStaR
 1,128,588 Bert (YorokobiYama)
   971,530 funkychipman
   959,462 Lajahu
-  912,060 BocksCarRacer
   853,987 maddymadhu2088
-  778,785 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+  808,460 Vᴀʟᴏʀ༒ʀL ʟᴠ㊵
+  794,782 BocksCarRacer
   773,749 beartiticus
   750,400 Ultrak1ll3r
   733,873 Souxie
@@ -156,21 +163,22 @@
   686,761 CrackahBling
   635,777 rubenochoa
   633,411 phoenix
-  617,884 diggity626
   607,675 kelevin
+  539,378 diggity626
   537,960 B
   520,336 daftl0rd
-  520,174 LarviTarPits
   510,258 baddaddy008
   509,247 jedizero
+  507,729 LarviTarPits
+  506,908 boodeez
   418,330 FursomeFeline
-  413,521 boodeez
   406,364 christofu
   401,770 45665SharkFins
   389,436 demello23
   375,537 TheFrenchAzn
+  358,365 skyhighfry
   355,990 KNYTEWIING
   338,423 Lexually
   245,615 Turkman21
-```*Updated: Sep 25, 03:33 PM*
+```*Updated: Sep 28, 03:04 PM*
 
