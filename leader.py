@@ -89,27 +89,33 @@ for name in trainers:
 titles = [":badge_catch: Number of Pokemon caught", ":badge_walk: KM walked", ":badge_battle: Battles fought", ":badge_xp: XP gained"]
 places = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":keycap_ten:"]
 
-TTY = sys.stdout.isatty()
-for TOP10 in [TTY]:
+TOP10 = sys.stdout.isatty()
+
+for MONTHLY in [False, True]:
+    if not TOP10 and not MONTHLY:
+        continue
     for U40 in [False, True]:
-        if U40 and not TOP10:
-            break
+        if U40 and (not TOP10 or not MONTHLY):
+            continue
         for category, title in enumerate(titles):
             if TOP10:
                 if U40:
-                    print "**%s in 30 days (under Lvl 40):**" % title
+                    print "**%s in Sept (under Lvl 40):**" % title
                 else:
-                    print "**%s in 30 days:**" % title
+                    if MONTHLY:
+                        print "**%s in Sept:**" % title
+                    else:
+                        print "**%s (All Time):**" % title
             else:
                 print "**%s:**" % title
                 print "```"
-            board.sort(key=lambda trainer: trainer["scores"][category], reverse = True)
+            board.sort(key=lambda trainer: trainer["scores" if MONTHLY else "totals"][category], reverse = True)
             formatted_scores = ["{:,}".format(trainer["scores"][category]) for trainer in board]
             formatted_totals = ["{:,}".format(trainer["totals"][category]) for trainer in board]
             longest_score = max(6, max([len(str(n)) for n in formatted_scores]))
             longest_total = max(5, max([len(str(n)) for n in formatted_totals]))
             if not TOP10:
-                print "%sMonth %sTotal" % (" " * (longest_score - 5), " " * (longest_total - 5 - max(0, 5-longest_score)))
+                print "%sGain %sTotal" % (" " * (longest_score - 4), " " * (longest_total - 5 - max(0, 4-longest_score)))
             place = 1
             for i, trainer in enumerate(board):
                 name = trainer["name"]
@@ -123,7 +129,7 @@ for TOP10 in [TTY]:
                         handle = trainers[name]["handle"]
                     except:
                         raise Exception("%s not found in names.txt" % name.encode('utf-8'))
-                    print "%s **%s** @%s" % (places[place-1], score, handle.encode('utf-8'))
+                    print "%s **%s** @%s" % (places[place-1], score if MONTHLY else total, handle.encode('utf-8'))
                 else:
                     score_pad = " " * (longest_score - len(score))
                     total_pad = " " * (longest_total - len(total))
@@ -134,9 +140,9 @@ for TOP10 in [TTY]:
                     else:
                         print "%s----- Top 10 -----" % score_pad
                 place = place + 1
-            print "" if TOP10 else "```*Updated: %s*\n" % latest
+            print "" if TOP10 else "```*Last entry: %s*\n" % latest
         if TOP10:
-            print "*Updated: %s*\n" % latest
+            print "\n"
 
 for name in trainers:
     trainer = trainers[name]
