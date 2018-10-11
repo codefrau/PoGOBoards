@@ -83,7 +83,7 @@ for name in trainers:
         continue
     this_month = []
     for f, l in zip(first["stats"], last["stats"]):
-        this_month.append(int((l - f) / days * days_in_month))
+        this_month.append(((l - f) / days * days_in_month))
     board.append({
         "name":   name,
         "scores":  this_month,
@@ -114,8 +114,9 @@ for MONTHLY in [False, True]:
                 print "**%s (%d %s):**" % (title, days_in_month, "day" if days_in_month == 1 else "days")
                 print "```"
             board.sort(key=lambda trainer: trainer["scores" if MONTHLY else "totals"][category], reverse = True)
-            formatted_scores = ["{:,}".format(trainer["scores"][category]) for trainer in board]
-            formatted_totals = ["{:,}".format(trainer["totals"][category]) for trainer in board]
+            template = "{:,.1f}" if MONTHLY and not TOP10 else "{:,}";
+            formatted_scores = [template.format(trainer["scores"][category]) for trainer in board]
+            formatted_totals = [template.format(trainer["totals"][category]) for trainer in board]
             longest_score = max(4, max([len(str(n)) for n in formatted_scores]))
             longest_total = max(5, max([len(str(n)) for n in formatted_totals]))
             #if not TOP10:
