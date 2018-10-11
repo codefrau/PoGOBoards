@@ -72,15 +72,14 @@ for name in trainers:
         continue
     days = 0
     for i in range(0, len(entries) - 1):
-        d = math.ceil((last["date"] - entries[i]["date"]).total_seconds() / 24 / 60 / 60)
+        d = math.floor((last["date"] - entries[i]["date"]).total_seconds() / 24 / 60 / 60)
         if days == 0 or entries[i]["date"] < begin_of_month and d >= 6:
-            #if days > 0:
-            #    print "%s was %s now %s days, skipping %s, using %s" % (name.encode('utf-8'), days, d, first["date"], entries[i]["date"])
             first = entries[i]
             days = d
     trainers[name]["days"] = days
     if days < 6:
         continue
+    print "%d days from %s to %s: %s" % (days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
     this_month = []
     for f, l in zip(first["stats"], last["stats"]):
         this_month.append(((l - f) / days * days_in_month))
