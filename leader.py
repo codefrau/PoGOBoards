@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-import sys
 import re
-import math
-import datetime
+from sys import stdout, stderr
+from math import ceil, floor
+from datetime import datetime
 
 reData = re.compile('^([0-9:T-]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +(.*)$')
 
@@ -12,7 +12,7 @@ latest = None
 
 for line in open('data.txt', 'r'):
     match = reData.match(line.decode("utf-8"))
-    date   = datetime.datetime.strptime(match.group(1), "%Y-%m-%dT%H:%M:%S")
+    date   = datetime.strptime(match.group(1), "%Y-%m-%dT%H:%M:%S")
     catch  = int(match.group(2))
     walk   = int(match.group(3))
     battle = int(match.group(4))
@@ -44,7 +44,7 @@ for line in open('data.txt', 'r'):
                 trainer["error"] = True
 
 begin_of_month = latest.replace(day=1, hour=0, minute=0)
-days_in_month = math.ceil((latest - begin_of_month).total_seconds() / 24 / 60 / 60)
+days_in_month = ceil((latest - begin_of_month).total_seconds() / 24 / 60 / 60)
 month = latest.strftime("%b")
 latest = latest.strftime("%b %d, %I:%M %p")
 
@@ -53,11 +53,11 @@ reName = re.compile('^((.*)#[0-9]+) ?(.*)$')
 for line in open('names.txt', 'r'):
     match = reName.match(line.decode("utf-8"))
     handle = match.group(1)
-    name = (match.group(3) or match.group(2))
+    name = match.group(3) or match.group(2)
     if name in trainers:
         trainers[name]["handle"] = handle
     else:
-        sys.stderr.write(line)
+        stderr.write(line)
         raise Exception("Name not in data: '%s'" % name.encode('utf-8'))
 
 board = []
@@ -74,7 +74,7 @@ for name in sorted(trainers.iterkeys()):
     for i in range(0, len(entries) - 1):
         start = entries[i]["date"].replace(hour=0, minute=0)
         end = last["date"].replace(hour=0, minute=0)
-        d = math.floor((end - start).total_seconds() / 24 / 60 / 60)
+        d = floor((end - start).total_seconds() / 24 / 60 / 60)
         if days == 0 or start < begin_of_month and d >= 6:
             first = entries[i]
             days = d
@@ -94,7 +94,7 @@ for name in sorted(trainers.iterkeys()):
 titles = [":badge_catch: Number of Pokemon caught", ":badge_walk: KM walked", ":badge_battle: Battles fought", ":badge_xp: XP gained"]
 places = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":keycap_ten:"]
 
-TOP10 = sys.stdout.isatty()
+TOP10 = stdout.isatty()
 
 for MONTHLY in [False, True]:
     if not TOP10 and not MONTHLY:
@@ -155,10 +155,10 @@ for name in trainers:
     trainer = trainers[name]
     if "error" in trainer:
         if "handle" in trainer:
-            sys.stderr.write("Stat got lower in submission from @%s:\n" % trainer["handle"].encode('utf-8'))
+            stderr.write("Stat got lower in submission from @%s:\n" % trainer["handle"].encode('utf-8'))
         else:
-            sys.stderr.write("Stat got lower in submission from %s:\n" % trainer["name"].encode('utf-8'))
-        sys.stderr.write("```\n")
+            stderr.write("Stat got lower in submission from %s:\n" % trainer["name"].encode('utf-8'))
+        stderr.write("```\n")
         for entry in trainer["entries"]:
-            sys.stderr.write("%s %s\n" % (entry["date"].isoformat(), entry["stats"]))
-        sys.stderr.write("```\n")
+            stderr.write("%s %s\n" % (entry["date"].isoformat(), entry["stats"]))
+        stderr.write("```\n")
