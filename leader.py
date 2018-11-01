@@ -72,8 +72,10 @@ for name in sorted(trainers.iterkeys()):
         continue
     days = 0
     for i in range(0, len(entries) - 1):
-        d = math.floor((last["date"] - entries[i]["date"]).total_seconds() / 24 / 60 / 60)
-        if days == 0 or entries[i]["date"] < begin_of_month and d >= 6:
+        start = entries[i]["date"].replace(hour=0, minute=0)
+        end = last["date"].replace(hour=0, minute=0)
+        d = math.floor((end - start).total_seconds() / 24 / 60 / 60)
+        if days == 0 or start < begin_of_month and d >= 6:
             first = entries[i]
             days = d
     trainers[name]["days"] = days
