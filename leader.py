@@ -113,7 +113,7 @@ for MONTHLY in [False, True]:
                 print "**%s (%d %s):**" % (title, days_in_month, "day" if days_in_month == 1 else "days")
                 print "```"
             board.sort(key=lambda trainer: trainer["scores" if MONTHLY else "totals"][category], reverse = True)
-            template = "{:,.1f}" if MONTHLY and not TOP10 else "{:,}";
+            template = "{:,.1f}" if MONTHLY and not TOP10 else "{:,.0f}";
             formatted_scores = [template.format(trainer["scores"][category]) for trainer in board]
             formatted_totals = [template.format(trainer["totals"][category]) for trainer in board]
             longest_score = max(4, max([len(str(n)) for n in formatted_scores]))
@@ -155,7 +155,7 @@ for name in trainers:
         if "handle" in trainer:
             sys.stderr.write("Stat got lower in submission from @%s:\n" % trainer["handle"].encode('utf-8'))
         else:
-            sys.stderr.write("Stat got lower in submission from %sn" % trainer["name"].encode('utf-8'))
+            sys.stderr.write("Stat got lower in submission from %s:\n" % trainer["name"].encode('utf-8'))
         sys.stderr.write("```\n")
         for entry in trainer["entries"]:
             sys.stderr.write("%s %s\n" % (entry["date"].isoformat(), entry["stats"]))
