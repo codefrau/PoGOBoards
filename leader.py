@@ -62,7 +62,7 @@ for line in open('names.txt', 'r'):
 
 board = []
 
-for name in trainers:
+for name in sorted(trainers.iterkeys()):
     entries = trainers[name]["entries"]
     if len(entries) < 2 or "error" in trainers[name]:
         continue
@@ -79,7 +79,7 @@ for name in trainers:
     trainers[name]["days"] = days
     if days < 6:
         continue
-    print "%d days from %s to %s: %s" % (days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
+    print "%2d days from %s to %s: %s" % (days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
     this_month = []
     for f, l in zip(first["stats"], last["stats"]):
         this_month.append(((l - f) / days * days_in_month))
