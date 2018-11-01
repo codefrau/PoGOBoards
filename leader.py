@@ -44,7 +44,7 @@ for line in open('data.txt', 'r'):
                 trainer["error"] = True
 
 begin_of_month = latest.replace(day=1, hour=0, minute=0)
-days_in_month = ceil((latest - begin_of_month).total_seconds() / 24 / 60 / 60)
+days_in_month = (latest - begin_of_month).days
 month = latest.strftime("%b")
 latest = latest.strftime("%b %d, %I:%M %p")
 
@@ -74,7 +74,7 @@ for name in sorted(trainers.iterkeys()):
     for i in range(0, len(entries) - 1):
         start = entries[i]["date"].replace(hour=0, minute=0)
         end = last["date"].replace(hour=0, minute=0)
-        d = floor((end - start).total_seconds() / 24 / 60 / 60)
+        d = (end - start).days
         if days == 0 or start < begin_of_month and d >= 6:
             first = entries[i]
             days = d
