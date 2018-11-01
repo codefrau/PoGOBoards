@@ -3,7 +3,8 @@
 import re
 from sys import stdout, stderr
 from math import ceil, floor
-from datetime import datetime
+from datetime import datetime, timedelta
+from calendar import monthrange
 
 reData = re.compile('^([0-9:T-]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +(.*)$')
 
@@ -44,7 +45,8 @@ for line in open('data.txt', 'r'):
                 trainer["error"] = True
 
 begin_of_month = latest.replace(day=1, hour=0, minute=0)
-days_in_month = (latest - begin_of_month).days
+days_so_far = (latest - begin_of_month).days
+is_last_day_of_month = latest.month != (latest + timedelta(days=1)).month
 month = latest.strftime("%b")
 latest = latest.strftime("%b %d, %I:%M %p")
 
@@ -84,7 +86,7 @@ for name in sorted(trainers.iterkeys()):
     print "%2d days from %s to %s: %s" % (days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
     this_month = []
     for f, l in zip(first["stats"], last["stats"]):
-        this_month.append(((l - f) / days * days_in_month))
+        this_month.append(((l - f) / days * days_so_far))
     board.append({
         "name":   name,
         "scores":  this_month,
@@ -112,7 +114,10 @@ for MONTHLY in [False, True]:
                     else:
                         print "**%s (All Time):**" % title
             else:
-                print "**%s (%d %s):**" % (title, days_in_month, "day" if days_in_month == 1 else "days")
+                if is_last_day_of_month:
+                    print "**%s (%s):**" % (title, month)
+                else:
+                    print "**%s (%d %s):**" % (title, days_so_far, "day" if days_so_far == 1 else "days")
                 print "```"
             board.sort(key=lambda trainer: trainer["scores" if MONTHLY else "totals"][category], reverse = True)
             template = "{:,.1f}" if MONTHLY and not TOP10 else "{:,.0f}";
@@ -139,8 +144,10 @@ for MONTHLY in [False, True]:
                 else:
                     score_pad = " " * (longest_score - len(score))
                     total_pad = " " * (longest_total - len(total))
-                    #print "%s%s %s%s %s" % (score_pad, score, total_pad, total, name.encode('utf-8'))
-                    print "%s%s %s" % (score_pad, score, name.encode('utf-8'))
+                    if is_last_day_of_month:
+                        print "%s%s %s%s %s" % (score_pad, score, total_pad, total, name.encode('utf-8'))
+                    else:
+                        print "%s%s %s" % (score_pad, score, name.encode('utf-8'))
                 if place == 10:
                     if TOP10:
                         break
