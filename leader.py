@@ -69,9 +69,11 @@ for line in open('names.txt', 'r'):
 
 board = []
 
-for is_last_month in [True, False]:
+for is_last_month in [True, False] if is_last_day_of_month else [False]:
     begin_date = begin_of_last_month if is_last_month else begin_of_this_month
     end_date = (begin_date + timedelta(days=31)).replace(day=1)
+    if end_date > latest:
+        end_date = latest.replace(hour=0, minute=0) + timedelta(days=1)
     days_so_far = (end_date - begin_date).days
     for name in sorted(trainers.iterkeys()):
         entries = trainers[name]["entries"]
@@ -96,11 +98,10 @@ for is_last_month in [True, False]:
         trainers[name]["days"] = days
         if days < 6:
             continue
-        print "%2d days from %s to %s: %s" % (days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
+        print "%d: %2d days from %s to %s: %s" % (days_so_far, days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
         this_month = []
-        print days_so_far, days
         for f, l in zip(first["stats"], last["stats"]):
-            this_month.append(((l - f) * days_so_far / days))
+            this_month.append((float(l - f) * days_so_far / days))
         board.append({
             "name":   name,
             "scores":  this_month,
