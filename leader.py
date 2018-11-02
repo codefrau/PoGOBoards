@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import re
 from sys import stdout, stderr
@@ -28,7 +29,8 @@ for line in open('data.txt', 'r'):
     else:
         trainer = {
             "name": name,
-            "entries": []
+            "entries": [],
+            "ranks": {},
         }
         trainers[name] = trainer
 
@@ -44,11 +46,9 @@ for line in open('data.txt', 'r'):
             if p > t:
                 trainer["error"] = True
 
-begin_of_month = latest.replace(day=1, hour=0, minute=0)
-days_so_far = (latest - begin_of_month).days
+begin_of_this_month = latest.replace(day=1, hour=0, minute=0)
+begin_of_last_month = (begin_of_this_month - timedelta(days=1)).replace(day=1)
 is_last_day_of_month = latest.month != (latest + timedelta(days=1)).month
-month = latest.strftime("%b")
-latest = latest.strftime("%b %d, %I:%M %p")
 
 reName = re.compile('^((.*)#[0-9]+) ?(.*)$')
 
@@ -56,6 +56,11 @@ for line in open('names.txt', 'r'):
     match = reName.match(line.decode("utf-8"))
     handle = match.group(1)
     name = match.group(3) or match.group(2)
+    if name == "-":
+        name = match.group(2)
+        del trainers[name]
+        print "removing", name.encode('utf-8')
+        continue
     if name in trainers:
         trainers[name]["handle"] = handle
     else:
@@ -64,39 +69,66 @@ for line in open('names.txt', 'r'):
 
 board = []
 
-for name in sorted(trainers.iterkeys()):
-    entries = trainers[name]["entries"]
-    if len(entries) < 2 or "error" in trainers[name]:
-        continue
-    first = entries[0]
-    last = entries[-1]
-    if last["date"] < begin_of_month:
-        continue
-    days = 0
-    for i in range(0, len(entries) - 1):
-        start = entries[i]["date"].replace(hour=0, minute=0)
-        end = last["date"].replace(hour=0, minute=0)
-        d = (end - start).days
-        if days == 0 or start < begin_of_month and d >= 6:
-            first = entries[i]
-            days = d
-    trainers[name]["days"] = days
-    if days < 6:
-        continue
-    print "%2d days from %s to %s: %s" % (days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
-    this_month = []
-    for f, l in zip(first["stats"], last["stats"]):
-        this_month.append(((l - f) / days * days_so_far))
-    board.append({
-        "name":   name,
-        "scores":  this_month,
-        "totals":  last["stats"],
-    })
+for is_last_month in [True, False]:
+    begin_date = begin_of_last_month if is_last_month else begin_of_this_month
+    end_date = (begin_date + timedelta(days=31)).replace(day=1)
+    days_so_far = (end_date - begin_date).days
+    for name in sorted(trainers.iterkeys()):
+        entries = trainers[name]["entries"]
+        if len(entries) < 2 or "error" in trainers[name]:
+            continue
+        first = entries[0]
+        last = entries[-1]
+        if last["date"] < begin_date:
+            continue
+        n = len(entries) - 1
+        while last["date"] > end_date and n > 0:
+            n -= 1
+            last = entries[n]
+        days = 0
+        for i in range(0, n):
+            start = entries[i]["date"].replace(hour=0, minute=0)
+            end = last["date"].replace(hour=0, minute=0)
+            d = (end - start).days
+            if days == 0 or start < begin_date and d >= 6:
+                first = entries[i]
+                days = d
+        trainers[name]["days"] = days
+        if days < 6:
+            continue
+        print "%2d days from %s to %s: %s" % (days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
+        this_month = []
+        print days_so_far, days
+        for f, l in zip(first["stats"], last["stats"]):
+            this_month.append(((l - f) * days_so_far / days))
+        board.append({
+            "name":   name,
+            "scores":  this_month,
+            "totals":  last["stats"],
+        })
+    # sort and assign rank for last month
+    if is_last_month:
+        for MONTHLY in [False, True]:
+            for U40 in [False, True]:
+                for category in range(0, 4):
+                    board.sort(key=lambda trainer: trainer["scores" if MONTHLY else "totals"][category], reverse = True)
+                    place = 1
+                    for line in board:
+                        trainer = trainers[line["name"]]
+                        xp = trainer["entries"][-1]["stats"][-1]
+                        if U40 and xp >= 20000000:
+                            continue
+                        key = "TM"[MONTHLY] + "AU"[U40] + "CJBX"[category]
+                        trainer["ranks"][key] = place
+                        place += 1
+        board = []
 
 titles = [":badge_catch: Number of Pokemon caught", ":badge_walk: KM walked", ":badge_battle: Battles fought", ":badge_xp: XP gained"]
 places = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":keycap_ten:"]
+month = latest.strftime("%b")
+latest = latest.strftime("%b %d, %I:%M %p")
 
-TOP10 = stdout.isatty()
+TOP10 = stdout.isatty() and is_last_day_of_month
 
 for MONTHLY in [False, True]:
     if not TOP10 and not MONTHLY:
@@ -105,6 +137,7 @@ for MONTHLY in [False, True]:
         if U40 and (not TOP10 or not MONTHLY):
             continue
         for category, title in enumerate(titles):
+            print "_ _"
             if TOP10:
                 if U40:
                     print "**%s in %s (under Lvl 40):**" % (title, month)
@@ -120,7 +153,7 @@ for MONTHLY in [False, True]:
                     print "**%s (%d %s):**" % (title, days_so_far, "day" if days_so_far == 1 else "days")
                 print "```"
             board.sort(key=lambda trainer: trainer["scores" if MONTHLY else "totals"][category], reverse = True)
-            template = "{:,.1f}" if MONTHLY and not TOP10 else "{:,.0f}";
+            template = "{:,.1f}" if MONTHLY and not TOP10 and not is_last_day_of_month else "{:,}"
             formatted_scores = [template.format(trainer["scores"][category]) for trainer in board]
             formatted_totals = [template.format(trainer["totals"][category]) for trainer in board]
             longest_score = max(4, max([len(str(n)) for n in formatted_scores]))
@@ -140,7 +173,12 @@ for MONTHLY in [False, True]:
                         handle = trainers[name]["handle"]
                     except:
                         raise Exception("%s not found in names.txt" % name.encode('utf-8'))
-                    print "%s **%s** @%s" % (places[place-1], score if MONTHLY else total, handle.encode('utf-8'))
+                    try:
+                        old_place = trainers[name]["ranks"]["TM"[MONTHLY] + "AU"[U40] + "CJBX"[category]]
+                        updown = ":more:" if old_place > place else (":less:" if old_place < place else ":same:")
+                    except:
+                        updown = ":new:"                        
+                    print "%s%s **%s** @%s" % (places[place-1], updown.encode('utf-8'), score if MONTHLY else total, handle.encode('utf-8'))
                 else:
                     score_pad = " " * (longest_score - len(score))
                     total_pad = " " * (longest_total - len(total))
@@ -154,7 +192,7 @@ for MONTHLY in [False, True]:
                     else:
                         print "%s----- Top 10 -----" % score_pad
                 place = place + 1
-            print "" if TOP10 else "```*Last entry: %s*\n" % latest
+            print "" if TOP10 else "```" if is_last_day_of_month else "```*Last entry: %s*\n" % latest
         if TOP10:
             print "\n"
 
