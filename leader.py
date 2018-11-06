@@ -75,7 +75,7 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
     if end_date > latest:
         end_date = latest.replace(hour=0, minute=0) + timedelta(days=1)
     days_so_far = (end_date - begin_date).days
-    for name in sorted(trainers.iterkeys()):
+    for name in sorted(trainers.iterkeys(), key=lambda s: s.lower()):
         entries = trainers[name]["entries"]
         if len(entries) < 2 or "error" in trainers[name]:
             continue
