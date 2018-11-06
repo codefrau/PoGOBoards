@@ -75,6 +75,7 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
     if end_date > latest:
         end_date = latest.replace(hour=0, minute=0) + timedelta(days=1)
     days_so_far = (end_date - begin_date).days
+    print "Finding submissions for calculating gain"
     for name in sorted(trainers.iterkeys(), key=lambda s: s.lower()):
         entries = trainers[name]["entries"]
         if len(entries) < 2 or "error" in trainers[name]:
@@ -98,7 +99,7 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
         trainers[name]["days"] = days
         if days < 6:
             continue
-        print "%d: %2d days from %s to %s: %s" % (days_so_far, days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
+        print "%2d days from %s to %s: %s" % (days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
         this_month = []
         for f, l in zip(first["stats"], last["stats"]):
             this_month.append((float(l - f) * days_so_far / days))
@@ -123,6 +124,8 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
                         trainer["ranks"][key] = place
                         place += 1
         board = []
+    else:
+        print "Normalizing to %d days in %s" % (days_so_far, begin_date.strftime("%B"))
 
 titles = [":badge_catch: Number of Pokemon caught", ":badge_walk: KM walked", ":badge_battle: Battles fought", ":badge_xp: XP gained"]
 places = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":keycap_ten:"]
