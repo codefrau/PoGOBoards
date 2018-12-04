@@ -75,7 +75,7 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
     if end_date > latest:
         end_date = latest.replace(hour=0, minute=0) + timedelta(days=1)
     days_so_far = (end_date - begin_date).days
-    print "Finding submissions for calculating gain"
+    print "```\nFinding submissions for calculating gain"
     for name in sorted(trainers.iterkeys(), key=lambda s: s.lower()):
         entries = trainers[name]["entries"]
         if len(entries) < 2 or "error" in trainers[name]:
@@ -99,6 +99,7 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
         trainers[name]["days"] = days
         if days < 6:
             continue
+        ordinal = lambda n: "%d%s" % (n,"tsnrhtdd"[(n/10%10!=1)*(n%10<4)*n%10::4])
         print "%2d days from %s to %s: %s" % (days, first["date"].strftime("%b %d"), last["date"].strftime("%b %d"), name.encode('utf-8'))
         this_month = []
         for f, l in zip(first["stats"], last["stats"]):
@@ -125,7 +126,7 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
                         place += 1
         board = []
     else:
-        print "Normalizing to %d days in %s" % (days_so_far, begin_date.strftime("%B"))
+        print "Normalizing to %d days in %s\n```" % (days_so_far, begin_date.strftime("%B"))
 
 titles = [":badge_catch: Number of Pokemon caught", ":badge_walk: KM walked", ":badge_battle: Battles fought", ":badge_xp: XP gained"]
 places = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":keycap_ten:"]
@@ -157,7 +158,7 @@ for MONTHLY in [False, True]:
                     print "**%s (%d %s):**" % (title, days_so_far, "day" if days_so_far == 1 else "days")
                 print "```"
             board.sort(key=lambda trainer: trainer["scores" if MONTHLY else "totals"][category], reverse = True)
-            template = "{:,.1f}" if MONTHLY and not TOP10 and not is_last_day_of_month else "{:,}"
+            template = "{:,.1f}" if MONTHLY and not TOP10 and not is_last_day_of_month else "{:,.0f}"
             formatted_scores = [template.format(trainer["scores"][category]) for trainer in board]
             formatted_totals = [template.format(trainer["totals"][category]) for trainer in board]
             longest_score = max(4, max([len(str(n)) for n in formatted_scores]))
