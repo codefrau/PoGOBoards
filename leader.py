@@ -7,6 +7,11 @@ from math import ceil, floor
 from datetime import datetime, timedelta
 from calendar import monthrange
 
+CATCH  = 0
+JOG    = 1
+BATTLE = 2
+XP     = 3
+
 reData = re.compile('^([0-9:T-]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +([0-9,]+) +(.*)$')
 
 trainers = {}
@@ -118,8 +123,8 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
                     place = 1
                     for line in board:
                         trainer = trainers[line["name"]]
-                        xp = trainer["entries"][-1]["stats"][-1]
-                        if U40 and xp >= 20000000:
+                        stats = trainer["entries"][-1]["stats"]
+                        if stats[category] == 0 or U40 and stats[XP] >= 20000000:
                             continue
                         key = "TM"[MONTHLY] + "AU"[U40] + "CJBX"[category]
                         trainer["ranks"][key] = place
@@ -170,8 +175,8 @@ for MONTHLY in [False, True]:
                 name = trainer["name"]
                 score = formatted_scores[i]
                 total = formatted_totals[i]
-                xp = trainers[name]["entries"][-1]["stats"][-1]
-                if U40 and xp >= 20000000:
+                stats = trainers[name]["entries"][-1]["stats"]
+                if stats[category] == 0 or U40 and stats[XP] >= 20000000:
                     continue
                 if TOP10:
                     try:
