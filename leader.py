@@ -124,7 +124,7 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
                     for line in board:
                         trainer = trainers[line["name"]]
                         stats = trainer["entries"][-1]["stats"]
-                        if stats[category] == 0 or U40 and stats[XP] >= 20000000:
+                        if stats[category] == 0 or U40 and (stats[XP] >= 20000000 or stats[XP] == 0):
                             continue
                         key = "TM"[MONTHLY] + "AU"[U40] + "CJBX"[category]
                         trainer["ranks"][key] = place
@@ -176,7 +176,7 @@ for MONTHLY in [False, True]:
                 score = formatted_scores[i]
                 total = formatted_totals[i]
                 stats = trainers[name]["entries"][-1]["stats"]
-                if stats[category] == 0 or U40 and stats[XP] >= 20000000:
+                if stats[category] == 0 or U40 and (stats[XP] >= 20000000 or stats[XP] == 0):
                     continue
                 if TOP10:
                     try:
