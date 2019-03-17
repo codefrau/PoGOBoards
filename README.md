@@ -21,3 +21,7 @@ I'm doing this on a Mac and use the `paste-raw.sh` shell script to automate step
 
 To get the monthly boards I follow the exact same steps, except I only copy submissions up to midnight of
 the last day of the month. The `./leader.py` script detects that, and creates all the boards.
+
+Since the Top 10 monthly boards `@tag` discord members, it uses the `names.txt` file to find the
+full discord username for a given name. This needs to be only maintained for members who make it into
+the Top 10.
