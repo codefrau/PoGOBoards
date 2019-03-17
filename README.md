@@ -1,6 +1,8 @@
 # BertBoards
 _Pokemon GO Leaderboards for Discord_
 
+![Leaderboards Screenshot](README.png)
+
 These are the leaderboard scripts I created for the PoGO Los Angeles discord server.
 
 It's only semi-automated. Every few days, I copy-and-paste the new entries from the
