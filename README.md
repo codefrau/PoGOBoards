@@ -25,3 +25,7 @@ the last day of the month. The `./leader.py` script detects that, and creates al
 Since the Top 10 monthly boards `@tag` discord members, it uses the `names.txt` file to find the
 full discord username for a given name. This needs to be only maintained for members who make it into
 the Top 10.
+
+The Top 10 also use some custom server emoji. Find them in the `emoji/` directory:
+![Emoji Screenshots](emoji/index.png)
+
