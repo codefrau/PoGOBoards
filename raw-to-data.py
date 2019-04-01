@@ -26,7 +26,7 @@ def parseCJBX(line):
     battle = int(match.group(3).replace(',', ''))
     xp     = int(match.group(4).replace(',', ''))
     return (catch, walk, battle, xp)
-    
+
 
 raw_files = os.listdir('raw')
 raw_files.sort()
@@ -51,6 +51,6 @@ for raw_file in raw_files:
                 prev_date = date
                 prev_trainer = trainer
             except Exception as e:
-                sys.stderr.write('%s\nprev: "%s"\nline: "%s"\n' % (e, prev_line, line))
-                raise
+                sys.stderr.write('ERROR: malformed submission\n***** %s\n***** %s\n' % (prev_line, line))
+                sys.exit(1);
         prev_line = line
