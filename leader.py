@@ -49,7 +49,7 @@ for line in open('data.txt', 'r'):
         this = trainer["entries"][-1]["stats"]
         for p, t in zip(prev, this):
             if p > t:
-                trainer["error"] = True
+                trainer["error"] = (prev, this)
 
 begin_of_this_month = latest.replace(day=1, hour=0, minute=0)
 begin_of_last_month = (begin_of_this_month - timedelta(days=1)).replace(day=1)
@@ -214,6 +214,11 @@ for name in trainers:
         else:
             stderr.write("Stat got lower in submission from %s:\n" % trainer["name"].encode('utf-8'))
         stderr.write("```\n")
+        wrong1, wrong2 = trainer["error"]
         for entry in trainer["entries"]:
+            if entry["stats"] == wrong1:
+                stderr.write("vvvvvv\n")
             stderr.write("%s %s\n" % (entry["date"].isoformat(), entry["stats"]))
+            if entry["stats"] == wrong2:
+                stderr.write("^^^^^\n")
         stderr.write("```\n")
