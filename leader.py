@@ -28,7 +28,7 @@ for line in open('data.txt', 'r'):
 
     #print date, catch, walk, battle, xp, name
     latest = date
-    
+
     if name in trainers:
         trainer = trainers[name]
     else:
@@ -85,14 +85,19 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
         entries = trainers[name]["entries"]
         if len(entries) < 2 or "error" in trainers[name]:
             continue
+        # find first and last as pair of submissions we use to calculate difference
         first = entries[0]
         last = entries[-1]
         if last["date"] < begin_date:
             continue
+        # find last entry as newest before end_date
         n = len(entries) - 1
         while last["date"] > end_date and n > 0:
             n -= 1
             last = entries[n]
+        if last["date"] < begin_date:
+            continue
+        # find first entry as newest before begin_date (but at least 6 days before last)
         days = 0
         for i in range(0, n):
             start = entries[i]["date"].replace(hour=0, minute=0)
@@ -123,7 +128,7 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
                     place = 1
                     for line in board:
                         trainer = trainers[line["name"]]
-                        stats = trainer["entries"][-1]["stats"]
+                        stats = line["totals"]
                         if stats[category] == 0 or U40 and (stats[XP] >= 20000000 or stats[XP] == 0):
                             continue
                         key = "TM"[MONTHLY] + "AU"[U40] + "CJBX"[category]
@@ -187,7 +192,7 @@ for MONTHLY in [False, True]:
                         old_place = trainers[name]["ranks"]["TM"[MONTHLY] + "AU"[U40] + "CJBX"[category]]
                         updown = ":more:" if old_place > place else (":less:" if old_place < place else ":same:")
                     except:
-                        updown = ":new:"                        
+                        updown = ":new:"
                     print "%s%s **%s** @%s" % (places[place-1], updown.encode('utf-8'), score if MONTHLY else total, handle.encode('utf-8'))
                 else:
                     score_pad = " " * (longest_score - len(score))
