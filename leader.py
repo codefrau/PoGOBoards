@@ -60,14 +60,29 @@ reName = re.compile('^((.*)#[0-9]+) ?(.*)$')
 for line in open('names.txt', 'r'):
     match = reName.match(line.decode("utf-8"))
     handle = match.group(1)
-    name = match.group(3) or match.group(2)
+    handleName = match.group(2)
+    nick = match.group(3)
+    name = nick or handleName
     if name == "-":
-        name = match.group(2)
+        name = handleName
         del trainers[name]
         print "removing", name.encode('utf-8')
         continue
     if name in trainers:
-        trainers[name]["handle"] = handle
+        trainer = trainers[name]
+        trainer["handle"] = handle
+        if name != handleName and handleName in trainers:
+            handleTrainer = trainers[handleName]
+            handleDate = handleTrainer["entries"][0]["date"]
+            nameDate = trainer["entries"][0]["date"]
+            if handleDate < nameDate:
+                trainer["entries"] = handleTrainer["entries"] + trainer["entries"]
+                del trainers[handleName]
+                print "Renaming", handleName, "to", name
+            else:
+                handleTrainer["entries"] = trainer["entries"] + handleTrainer["entries"]
+                del trainers[name]
+                print "Renaming", name, "to", handleName
     else:
         stderr.write(line)
         raise Exception("Name not in data: '%s'" % name.encode('utf-8'))
