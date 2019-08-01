@@ -78,11 +78,11 @@ for line in open('names.txt', 'r'):
             if handleDate < nameDate:
                 trainer["entries"] = handleTrainer["entries"] + trainer["entries"]
                 del trainers[handleName]
-                print "Renaming", handleName, "to", name
+                print "Renaming", handleName.encode('utf-8'), "to", name.encode('utf-8')
             else:
                 handleTrainer["entries"] = trainer["entries"] + handleTrainer["entries"]
                 del trainers[name]
-                print "Renaming", name, "to", handleName
+                print "Renaming", name.encode('utf-8'), "to", handleName.encode('utf-8')
     else:
         stderr.write(line)
         raise Exception("Name not in data: '%s'" % name.encode('utf-8'))
