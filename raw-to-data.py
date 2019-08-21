@@ -5,7 +5,7 @@ import sys
 import re
 import dateparser
 
-reAuthorDate = re.compile('^(.*)([A-Z][a-z]+day at [1-9][0-9]?:[0-9][0-9] (AM|PM))$')
+reAuthorDate = re.compile('^(.*)([A-Z][a-z]+day at [1-9][0-9]?:[0-9][0-9] (AM|PM)|[0-9][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9])$')
 
 def parseAuthorDate(line, file_date):
     match = reAuthorDate.match(line)
@@ -52,5 +52,6 @@ for raw_file in raw_files:
                 prev_trainer = trainer
             except Exception as e:
                 sys.stderr.write('ERROR: malformed submission\n***** %s\n***** %s\n' % (prev_line, line))
+                raise e
                 sys.exit(1);
         prev_line = line
