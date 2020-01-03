@@ -148,6 +148,8 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
                             continue
                         key = "TM"[MONTHLY] + "AU"[U40] + "CJBX"[category]
                         trainer["ranks"][key] = place
+                        if MONTHLY and not U40 and place <= 3:
+                            trainer["was_green"] = True
                         place += 1
         board = []
     else:
@@ -191,8 +193,8 @@ for MONTHLY in [False, True]:
             #if not TOP10:
             #    print "%sGain %sTotal" % (" " * (longest_score - 3), " " * (longest_total - 5 - max(0, 3-longest_score)))
             place = 1
-            for i, trainer in enumerate(board):
-                name = trainer["name"]
+            for i, row in enumerate(board):
+                name = row["name"]
                 score = formatted_scores[i]
                 total = formatted_totals[i]
                 stats = trainers[name]["entries"][-1]["stats"]
@@ -216,6 +218,8 @@ for MONTHLY in [False, True]:
                         print "%s%s %s%s %s" % (score_pad, score, total_pad, total, name.encode('utf-8'))
                     else:
                         print "%s%s %s" % (score_pad, score, name.encode('utf-8'))
+                if MONTHLY and not U40 and place <= 3:
+                    trainers[name]["is_green"] = True
                 if place == 10:
                     if TOP10:
                         break
@@ -225,6 +229,24 @@ for MONTHLY in [False, True]:
             print "" if TOP10 else "```" if is_last_day_of_month else "```*Last entry: %s*\n" % latest
         if TOP10:
             print "\n"
+
+if is_last_day_of_month:
+    now_green = []
+    still_green = []
+    not_green = []
+    for name in trainers:
+        trainer = trainers[name]
+        if "is_green" in trainer:
+            if "was_green" in trainer:
+                still_green.append(trainer["handle"])
+            else:
+                now_green.append(trainer["handle"])
+        else:
+            if "was_green" in trainer:
+                not_green.append(trainer["handle"])
+    print "Newly green: %s" % " ".join(now_green)
+    print "Still green: %s" % " ".join(still_green)
+    print "Not green: %s" % " ".join(not_green)
 
 for name in trainers:
     trainer = trainers[name]
