@@ -143,8 +143,8 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
                     place = 1
                     for line in board:
                         trainer = trainers[line["name"]]
-                        stats = line["totals"]
-                        if stats[category] == 0 or U40 and (stats[XP] >= 20000000 or stats[XP] == 0):
+                        total = line["totals"]
+                        if total[category] == 0 or U40 and (total[XP] >= 20000000 or total[XP] == 0):
                             continue
                         key = "TM"[MONTHLY] + "AU"[U40] + "CJBX"[category]
                         trainer["ranks"][key] = place
@@ -193,8 +193,8 @@ for MONTHLY in [False, True]:
             #if not TOP10:
             #    print "%sGain %sTotal" % (" " * (longest_score - 3), " " * (longest_total - 5 - max(0, 3-longest_score)))
             place = 1
-            for i, row in enumerate(board):
-                name = row["name"]
+            for i, line in enumerate(board):
+                name = line["name"]
                 score = formatted_scores[i]
                 total = formatted_totals[i]
                 stats = trainers[name]["entries"][-1]["stats"]
