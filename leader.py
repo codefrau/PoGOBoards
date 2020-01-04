@@ -107,7 +107,7 @@ for is_last_month in [True, False] if is_last_day_of_month else [False]:
             continue
         # find last entry as newest before end_date
         n = len(entries) - 1
-        while last["date"] > end_date and n > 0:
+        while last["date"] >= end_date and n > 0:
             n -= 1
             last = entries[n]
         if last["date"] < begin_date:
