@@ -238,15 +238,16 @@ if is_last_day_of_month:
         trainer = trainers[name]
         if "is_green" in trainer:
             if "was_green" in trainer:
-                still_green.append(trainer["handle"])
+                still_green.append("@" + trainer["handle"])
             else:
-                now_green.append(trainer["handle"])
+                now_green.append("@" + trainer["handle"])
         else:
             if "was_green" in trainer:
-                not_green.append(trainer["handle"])
+                not_green.append("@" + trainer["handle"])
+    print
     print "Newly green: %s" % " ".join(now_green)
     print "Still green: %s" % " ".join(still_green)
-    print "Not green: %s" % " ".join(not_green)
+    print "Lost green: %s" % " ".join(not_green)
 
 for name in trainers:
     trainer = trainers[name]
