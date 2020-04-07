@@ -1,4 +1,4 @@
-# BertBoards
+# PoGOBoards
 _Pokemon GO Leaderboards for Discord_
 
 ![Leaderboards Screenshot](README.png)
